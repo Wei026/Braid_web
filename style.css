@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+body {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0 24px;
+  background-image: url(/background3.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+  /*產生一個持續時間為 6 秒、無限循環播放、交替反向播放的旋轉動畫，動畫速度是匀速的*/
+  animation: rotate 6s infinite alternate linear;
+}
+
+.login-card {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  margin: 0 20px;
+  padding: 70px 30px 44px;
+  border-radius: 1.25rem;
+  background-color: white;
+  text-align: center;
+}
+
+.login-card > h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.login-card > h3 {
+  color: rgba(0, 0, 0, 0.38);
+  margin: 0 0 30px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.login-form {
+  width: 100%;
+  margin: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.login-form > input,
+.login-form > button {
+  width: 100%;
+  height: 50px;
+}
+
+.login-form > input {
+  border: 2px solid #ebebeb;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 15px;
+  padding: 0 16px;
+  border-radius: 1.25rem;
+  transition: all 0.375s;
+}
+
+.login-form > input:hover {
+  border: 2px solid #10449a;
+}
+
+/*cursor: pointer;當鼠標指針位於此元素上時，應該將鼠標指針顯示為手型指針。*/
+/*letter-spacing: 用於設置文字之間的間距*/
+/*background-image: linear-gradient(to right, #7db0db, #d9a3e5);顏色漸層*/
+.login-form > button {
+  cursor: pointer;
+  width: 100%;
+  padding: 0 16px;
+  border-radius: 1.25rem;
+  background-image: linear-gradient(to right, #7db0db, #d9a3e5);
+  border: 0;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 2px;
+  transition: all 0.375s;
+}
+
+.login-form > button:hover {
+  background-image: linear-gradient(to left, #7db0db, #d9a3e5);
+}
+
+.login-form > a {
+  color: #a6acdf;
+  font-size: 0.9rem;
+  text-align: left;
+  text-decoration: none;
+  margin-bottom: 6px;
+  transition: all 0.375s;
+}
+
+.login-form > a:hover {
+  color: #10449a;
+}
+
+@keyframes rotate {
+  100% {
+    background-position: 15% 50%;
+  }
+}
+
+@media (width >= 500px) {
+  body {
+    padding: 0;
+  }
+  .login-card {
+    margin: 0;
+    width: 400px;
+  }
+}
